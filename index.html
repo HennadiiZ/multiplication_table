@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="review.css">
+    <title>Document</title>
+</head>
+<body>
+<style>
+body{
+    background-image: linear-gradient(140deg, rgb(97, 96, 96), rgb(168, 125, 168));
+}
+
+.daddy{
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.daddy div{
+    width:150px;
+    height: 250px;
+    border: 3px solid rgb(238, 238, 138);
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    /* transition-duration: 2s; */
+    transition: all 1s ease 0s;
+}
+.daddy div:hover{
+    background-image: linear-gradient(140deg, rgb(168, 125, 168), rgb(97, 96, 96));
+}   
+</style>
+
+<div class='daddy'>
+    <div class='mult mult1'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+</div>
+<div class='daddy'>
+    <div class='mult mult1'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+    <div class='mult'></div>
+</div>
+
+<script>
+function func(num){     
+    let res = '';
+for(let i = 1; i <= 10; i++) {
+    res += i + '*'+ num + '  =' + i * num  + '<br>'
+}
+return  res; 
+}
+const mult = document.querySelectorAll('.mult');
+let i = 1
+for (let mult1 of mult){
+      mult1.innerHTML += func(i++);
+}
+</script>
+
+</body>
+</html>
